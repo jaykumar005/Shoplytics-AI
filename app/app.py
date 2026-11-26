@@ -144,6 +144,20 @@ div[data-testid="stFileUploader"] [data-testid="stWidgetLabel"] {
     border-radius: 6px !important;
     margin-bottom: 10px !important;
 }
+/* Fix Data Center information banner */
+div[data-testid="stAlert"] {
+    background-color: #eef2ff !important;
+    border: 1px solid #c7d2fe !important;
+    border-radius: 10px !important;
+}
+
+div[data-testid="stAlert"] p,
+div[data-testid="stAlert"] span,
+div[data-testid="stAlert"] * {
+    color: #3730a3 !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 

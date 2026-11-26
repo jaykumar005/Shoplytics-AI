@@ -48,12 +48,49 @@ div[data-testid="stMetric"] {
   background:white; border:1px solid #e7eaf3; padding:15px 17px; border-radius:16px;
   box-shadow:0 5px 18px rgba(31,41,55,.045);
 }
-div[data-testid="stMetricLabel"] { color:#475569 !important; opacity:1 !important; }
+/* Strong, accessible contrast for KPI labels and values */
+div[data-testid="stMetric"] { background:#ffffff !important; }
+div[data-testid="stMetricLabel"],
 div[data-testid="stMetricLabel"] p,
 div[data-testid="stMetricLabel"] label,
-div[data-testid="stMetricLabel"] * { color:#475569 !important; opacity:1 !important; font-weight:700 !important; }
+div[data-testid="stMetricLabel"] span,
+div[data-testid="stMetricLabel"] * {
+  color:#334155 !important; opacity:1 !important; font-weight:750 !important;
+}
 div[data-testid="stMetricValue"],
-div[data-testid="stMetricValue"] * { color:#172033 !important; font-weight:800 !important; }
+div[data-testid="stMetricValue"] div,
+div[data-testid="stMetricValue"] span,
+div[data-testid="stMetricValue"] * {
+  color:#172033 !important; opacity:1 !important; font-weight:850 !important;
+}
+/* Keep upload controls light and readable across Streamlit themes */
+div[data-testid="stFileUploader"],
+div[data-testid="stFileUploader"] section,
+div[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"] {
+  background:#ffffff !important; color:#334155 !important;
+  border-color:#cbd5e1 !important;
+}
+div[data-testid="stFileUploader"] label,
+div[data-testid="stFileUploader"] p,
+div[data-testid="stFileUploader"] span,
+div[data-testid="stFileUploader"] small {
+  color:#334155 !important; opacity:1 !important;
+}
+div[data-testid="stFileUploader"] button {
+  color:#ffffff !important; background:#4f46e5 !important; border:0 !important;
+}
+/* Clearer body copy and sidebar text */
+.stApp, .stApp p, .stApp label, .stApp [data-testid="stCaptionContainer"] {
+  color:#334155;
+}
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] * {
+  color:#cbd5e1 !important; opacity:1 !important;
+}
+section[data-testid="stSidebar"] [data-testid="stRadio"] label,
+section[data-testid="stSidebar"] [data-testid="stRadio"] label * {
+  color:#ffffff !important; opacity:1 !important; font-weight:600 !important;
+}
 div[data-testid="stPlotlyChart"], div[data-testid="stDataFrame"] {
   background:#ffffff !important; color:#172033 !important;
   border:1px solid #e7eaf3; border-radius:16px; padding:8px;
@@ -79,10 +116,34 @@ h1,h2,h3 { letter-spacing:-.45px; }
 .workspace-card.blue { background:linear-gradient(135deg,#2563eb,#38bdf8); }
 .workspace-card.teal { background:linear-gradient(135deg,#0f9f91,#2dd4bf); }
 .workspace-card.orange { background:linear-gradient(135deg,#ea580c,#f59e0b); }
-@media (max-width: 900px) { .workspace-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 1100px) { .workspace-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width: 560px) { .workspace-grid { grid-template-columns:1fr; } }
 
 footer { visibility:hidden; }
+.hero p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+div[data-testid="stFileUploader"] button,
+div[data-testid="stFileUploader"] button *,
+div[data-testid="stFileUploader"] button span {
+    color: #ffffff !important;
+    background-color: #4f46e5 !important;
+    font-weight: 600 !important;
+}
+/* Highlight all CSV/Excel upload labels */
+div[data-testid="stFileUploader"] [data-testid="stWidgetLabel"] {
+    color: #3730a3 !important;
+    font-weight: 800 !important;
+    font-size: 16px !important;
+    background: #eef2ff !important;
+    padding: 9px 12px !important;
+    border-left: 4px solid #6366f1 !important;
+    border-radius: 6px !important;
+    margin-bottom: 10px !important;
+}
 </style>
 """, unsafe_allow_html=True)
 

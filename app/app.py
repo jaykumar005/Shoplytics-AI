@@ -103,7 +103,18 @@ div[data-testid="stPlotlyChart"], div[data-testid="stDataFrame"] {
 }
 .stButton > button:hover { color:white; border:0; background:linear-gradient(100deg,#5147df,#16a995); }
 div[data-testid="stFileUploader"] { background:white; border:1px dashed #b8c0d8; border-radius:15px; padding:10px; }
-div[data-testid="stAlert"] { border-radius:13px; }
+div[data-testid="stAlert"] {
+    background-color: #eef2ff !important;
+    border: 1px solid #c7d2fe !important;
+    border-radius: 13px !important;
+}
+
+div[data-testid="stAlert"] p,
+div[data-testid="stAlert"] span {
+    color: #3730a3 !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
 h1,h2,h3 { letter-spacing:-.45px; }
 
 .workspaces-title { color:#172033; font-size:1.25rem; font-weight:800; margin:1.35rem 0 .8rem; }

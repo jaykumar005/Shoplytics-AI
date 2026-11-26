@@ -169,6 +169,25 @@ div[data-testid="stAlert"] * {
     opacity: 1 !important;
     font-weight: 600 !important;
 }
+
+/* Final Data Center alert color fix */
+div[data-testid="stAlert"] {
+    background: #eef2ff !important;
+    background-color: #eef2ff !important;
+}
+
+div[data-testid="stAlert"] > div,
+div[data-testid="stAlert"] [role="alert"] {
+    background: #eef2ff !important;
+    background-color: #eef2ff !important;
+    border-color: #c7d2fe !important;
+}
+
+div[data-testid="stAlert"] * {
+    color: #3730a3 !important;
+    opacity: 1 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
